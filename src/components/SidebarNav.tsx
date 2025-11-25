@@ -2,21 +2,27 @@ import { useState } from "react";
 
 interface SidebarNavProps {
   activeSection: string;
+  onScrollToSection: (id: string) => void;
 }
 
-export function SidebarNav({ activeSection }: SidebarNavProps) {
+export function SidebarNav({ activeSection, onScrollToSection }: SidebarNavProps) {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const navItems = [
     { id: "home", label: "Chi sono" },
     { id: "approccio", label: "Approccio" },
     { id: "aree", label: "Aree di lavoro" },
-    { id: "risorse", label: "Risorse" },
+    { id: "media", label: "Media" },
     { id: "collaborazioni", label: "Collaborazioni" },
     { id: "contatto", label: "Contattami" },
   ];
 
   const scrollToSection = (id: string) => {
+    if (onScrollToSection) {
+      onScrollToSection(id);
+      setMobileOpen(false);
+      return;
+    }
     const element = document.getElementById(id);
     if (element) {
       const offset = 100;

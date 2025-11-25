@@ -260,3 +260,13 @@ html {
   font-family: 'DM Sans', sans-serif;
   font-weight: 400;
 }
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.fade-in-section.visible {
+  opacity: 1;
+  transform: none;
+}
