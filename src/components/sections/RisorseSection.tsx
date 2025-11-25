@@ -67,19 +67,58 @@ export function RisorseSection() {
 
   const materiali = [
     {
-      title: "Toolkit progettazione partecipata",
-      tipo: "PDF - 45 pagine",
-      descrizione: "Strumenti e metodologie per processi partecipativi",
+      title: "Presentazione Udine - Generale - 12.05.25",
+      tipo: "PDF",
+      descrizione: "Presentazione generale Udine, 12 maggio 2025",
+      link: "/materiali/Presentazione Udine - Generale - 12.05.25.pdf",
     },
     {
-      title: "Guida alla valutazione d'impatto sociale",
-      tipo: "PDF - 62 pagine",
-      descrizione: "Framework e best practices per misurare l'impatto",
+      title: "AP2 Final Report",
+      tipo: "PDF",
+      descrizione: "Report finale progetto AP2",
+      link: "/materiali/AP2 Final Report.pdf",
     },
     {
-      title: "Template progettazione europea",
-      tipo: "Pack risorse",
-      descrizione: "Modelli e checklist per progetti EU",
+      title: "Carlo Ferretti - BE PART - Europrogettazione - 04.11.24",
+      tipo: "PDF",
+      descrizione: "Materiale europrogettazione BE PART, 4 novembre 2024",
+      link: "/materiali/Carlo Ferretti - BE PART - Europrogettazione - 04.11.24.pdf",
+    },
+    {
+      title: "Carlo Ferretti - UNeECC Annual Conference 2024",
+      tipo: "PDF",
+      descrizione: "Presentazione UNeECC Annual Conference 2024",
+      link: "/materiali/Copy of Carlo Ferretti - UNeECC Annual Conference 2024.pdf",
+    },
+    {
+      title: "RAQAMA Handbook Program",
+      tipo: "PDF",
+      descrizione: "Handbook del programma RAQAMA",
+      link: "/materiali/Copy of RAQAMA Handbook Program.pdf",
+    },
+    {
+      title: "Cos’è Kublai",
+      tipo: "PDF",
+      descrizione: "Documento informativo sul progetto Kublai",
+      link: "/materiali/Cos’è Kublai.pdf",
+    },
+    {
+      title: "DROP_D2.1 Conceptual design of the Co-governance Methodology through the CCIs_Final Version",
+      tipo: "PDF",
+      descrizione: "Conceptual design della metodologia di co-governance tramite le CCIs",
+      link: "/materiali/DROP_D2.1 Conceptual design of the Co-governance Methodology through the CCIs_Final Version.pdf",
+    },
+    {
+      title: "Handbook 3_ENG",
+      tipo: "PDF",
+      descrizione: "Handbook in inglese, versione 3",
+      link: "/materiali/Handbook 3_ENG.pdf",
+    },
+    {
+      title: "magma fest programma",
+      tipo: "PDF",
+      descrizione: "Programma del Magma Fest",
+      link: "/materiali/magma fest programma.pdf",
     },
   ];
 
@@ -196,7 +235,18 @@ export function RisorseSection() {
                 <FileText className="w-5 h-5 flex-shrink-0 mt-1 text-secondary group-hover:text-black transition-colors" />
                 <div className="flex-1">
                   <h4 className="font-title mb-1">
-                    {materiale.title}
+                    {materiale.link ? (
+                      <a
+                        href={materiale.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-accent underline transition-colors"
+                      >
+                        {materiale.title}
+                      </a>
+                    ) : (
+                      materiale.title
+                    )}
                   </h4>
                   <p className="font-body text-xs text-secondary mb-2">
                     {materiale.tipo}
