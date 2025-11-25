@@ -45,7 +45,7 @@ export function ApproccioSection() {
   ];
 
   return (
-    <section id="approccio" className="py-32 bg-black/[0.02]">
+    <section id="approccio" className="py-32 section-back">
       <div className="max-w-5xl mx-auto px-6 lg:px-12">
         <div className="mb-24">
           <h2 className=" font-title text-3xl lg:text-5xl tracking-tight mb-8">

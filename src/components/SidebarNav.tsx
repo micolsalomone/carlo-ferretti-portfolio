@@ -33,7 +33,7 @@ export function SidebarNav({ activeSection }: SidebarNavProps) {
   return (
     <>
       {/* Desktop Sidebar */}
-      <nav className="hidden lg:block fixed left-0 top-0 h-screen w-64 border-r border-black/10 bg-white z-50">
+      <nav className="hidden lg:block fixed left-0 top-0 h-screen w-64 border-r border-black/10 sidebar">
         <div className="flex flex-col h-full p-12">
           {/* Navigation */}
           <nav className="flex-1">
@@ -47,15 +47,15 @@ export function SidebarNav({ activeSection }: SidebarNavProps) {
                       transition-colors duration-200 text-left w-full
                       ${
                         activeSection === item.id
-                          ? "text-black"
-                          : "text-black/40 hover:text-black/70"
+                          ? "text-accent"
+                          : "text-secondary hover:text-accent"
                       }
                     `}
                   >
                     <span className="flex items-center gap-3">
                       <span
                         className={`
-                          w-1 h-1 rounded-full bg-black transition-opacity duration-200
+                          w-1 h-1 rounded-full bg-accent transition-opacity duration-200
                           ${activeSection === item.id ? "opacity-100" : "opacity-0"}
                         `}
                       />

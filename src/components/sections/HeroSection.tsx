@@ -111,11 +111,11 @@ export function HeroSection() {
 
   return (
     <section id="home" className="pt-24 lg:pt-32 pb-32">
-      <div className="max-w-5xl mx-auto px-6 lg:px-12">
+      <div className="max-w-5xl mx-auto px-6 lg:px-12 bg-background">
         {/* Hero */}
         <div className="mb-32">
           <h2 
-            className=" font-title text-[60px] leading-[75px] tracking-[-1.5px] mb-8 max-w-3xl"
+            className=" font-title text-foreground text-[60px] leading-[75px] tracking-[-1.5px] mb-8 max-w-3xl"
             style={{ fontVariationSettings: "'opsz' 14, 'wdth' 100" }}
           >
             Città, cultura,
@@ -128,13 +128,13 @@ export function HeroSection() {
           <div className="grid lg:grid-cols-3 gap-12 mb-24">
             <div className="lg:col-span-2">
               <p 
-                className=" font-body text-[18px] leading-[29.25px] mb-6"
+                className=" font-body text-[18px] leading-[29.25px] mb-6 text-foreground"
                 style={{ fontVariationSettings: "'opsz' 14, 'wdth' 100" }}
               >
                 Mi occupo di progettazione strategica, valutazione d'impatto e sviluppo di ecosistemi collaborativi nel terzo settore e nell'economia sociale. Scrivo progetti e policy per una società più equa.
               </p>
               <p 
-                className=" font-body text-[18px] leading-[29.25px] text-black/60"
+                className=" font-body text-[18px] leading-[29.25px] text-secondary"
                 style={{ fontVariationSettings: "'opsz' 14, 'wdth' 100" }}
               >
                 Lavoro tra ricerca accademica, consulenza e formazione, integrando approcci partecipativi e strumenti di design per organizzazioni, istituzioni e reti culturali.
@@ -154,7 +154,7 @@ export function HeroSection() {
 
         {/* Mappa aree di attività */}
         <div className="mb-32">
-          <h3 className=" font-title text-sm uppercase tracking-wider mb-8 text-black/60">
+          <h3 className=" font-title text-sm uppercase tracking-wider mb-8 text-secondary">
             Aree di attività
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -176,7 +176,7 @@ export function HeroSection() {
                     }}
                   />
                 </div>
-                <p className="font-title  flex-1">
+                <p className="font-title text-foreground flex-1">
                   {area.name}
                 </p>
               </button>
@@ -187,7 +187,7 @@ export function HeroSection() {
         {/* Progetti in evidenza */}
         <div className="mb-32">
           <div className="flex items-center justify-between mb-8">
-            <h3 className="font-title  text-sm uppercase tracking-wider text-black/60">
+            <h3 className="font-title  text-sm uppercase tracking-wider text-secondary">
               Progetti in evidenza
             </h3>
             <a
@@ -212,14 +212,14 @@ export function HeroSection() {
 
         {/* Partner */}
         <div className="mb-32">
-          <h3 className=" font-title text-sm uppercase tracking-wider mb-8 text-black/60">
+          <h3 className=" font-title text-sm uppercase tracking-wider mb-8 text-secondary">
             Organizzazioni partner
           </h3>
           <div className="flex flex-wrap gap-x-8 gap-y-4">
             {partner.map((org, index) => (
               <span
                 key={index}
-                className=" font-body text-sm text-black/60"
+                className=" font-body text-sm text-secondary"
               >
                 {org}
               </span>

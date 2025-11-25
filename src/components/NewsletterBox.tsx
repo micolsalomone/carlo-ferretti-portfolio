@@ -3,10 +3,10 @@ import { ArrowRight } from "lucide-react";
 export function NewsletterBox() {
   return (
     <div className="border border-black/10 p-8 lg:p-12">
-      <h3 className=" font-title text-2xl mb-4">
+      <h3 className=" font-title text-foreground text-2xl mb-4">
         Newsletter
       </h3>
-      <p className=" font-body text-black/60 mb-8 max-w-xl">
+      <p className=" font-body text-secondary mb-8 max-w-xl">
         Ricevi aggiornamenti su progetti, pubblicazioni e opportunità di
         collaborazione.
       </p>

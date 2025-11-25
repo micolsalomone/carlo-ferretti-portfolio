@@ -23,7 +23,7 @@ export function TopBar() {
       <div className="flex flex-row items-center w-full">
         <div className="box-border content-stretch flex items-center justify-between px-6 lg:px-[168px] relative w-full pl-14 lg:pl-16">
           <p
-            className={`font-title font-medium leading-[26px] relative shrink-0 text-black text-nowrap tracking-[-0.4px] whitespace-pre transition-all duration-300 ${
+            className={`font-title text-foreground font-medium leading-[26px] relative shrink-0 text-nowrap tracking-[-0.4px] whitespace-pre transition-all duration-300 ${
               isScrolled ? "text-[18px]" : "text-[22px]"
             }`}
             style={{ fontVariationSettings: "'opsz' 14, 'wdth' 100" }}
@@ -51,7 +51,7 @@ export function TopBar() {
             </div>
           </div>
           <p
-            className={`font-body font-normal leading-[18px] relative shrink-0 text-black text-nowrap tracking-[-0.4px] whitespace-pre transition-all duration-300 ${
+            className={`font-body font-normal leading-[18px] relative shrink-0 text-foreground text-nowrap tracking-[-0.4px] whitespace-pre transition-all duration-300 ${
               isScrolled ? "text-[14px]" : "text-[16px]"
             }`}
             style={{ fontVariationSettings: "'opsz' 14, 'wdth' 100" }}

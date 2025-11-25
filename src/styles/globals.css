@@ -18,7 +18,7 @@
   --secondary-foreground: #000000;
   --muted: #f5f5f5;
   --muted-foreground: #666666;
-  --accent: #0400ff;
+  --accent: #000000;
   --accent-foreground: #ffffff;
   --destructive: #d4183d;
   --destructive-foreground: #ffffff;
@@ -43,8 +43,8 @@
   --sidebar-accent-foreground: #000000;
   --sidebar-border: rgba(0, 0, 0, 0.1);
   --sidebar-ring: rgba(0, 0, 0, 0.2);
-  --section-background: #f5f5f5;      /* Sfondo sezioni */
-  --text-secondary: #666666;          /* Testo secondario */
+  --section-background: #e7e9f1;      /* Sfondo sezioni */
+  --text-secondary: #797979;          /* Testo secondario */
 }
 
 .dark {
@@ -222,14 +222,32 @@ html {
     .bg-background {
     background-color: var(--background, #fff);
   }
+  .bg-accent {
+    background-color: var(--accent);
+  }
     .text-foreground {
     color: var(--foreground, #000);
   }
+  .text-secondary {
+    color: var(--text-secondary);
+  }
+  .text-section {
+    color: var(--foreground);
+  }
+  .text-section-secondary {
+    color: var(--text-secondary);
+  }
   .text-accent {
-    color: var(--accent, #000);
+    color: var(--accent);
   }
   .hover\:text-accent:hover {
     color: var(--accent, #000);
+  }
+  .section-back {
+    background-color: var(--section-background);
+  }
+  .sidebar {
+    background-color: var(--sidebar);
   }
 }
 

@@ -117,7 +117,7 @@ export function AreeLavoroSection() {
     <section id="aree" className="py-32">
       <div className="max-w-5xl mx-auto px-6 lg:px-12">
         <div className="mb-24">
-          <h2 className=" font-title text-3xl lg:text-5xl tracking-tight mb-8">
+          <h2 className=" font-title text-section text-3xl lg:text-5xl tracking-tight mb-8">
             Aree di lavoro
           </h2>
         </div>
@@ -138,18 +138,18 @@ export function AreeLavoroSection() {
                     }}
                   />
                 </div>
-                <h3 className=" font-title text-2xl">
+                <h3 className=" font-title text-section text-3xl">
                   {area.title}
                 </h3>
               </div>
-              <p className=" font-body text-black/60 mb-12 leading-relaxed max-w-2xl">
+              <p className=" font-body text-secondary mb-12 leading-relaxed max-w-2xl">
                 {area.intro}
               </p>
 
               <div className="grid lg:grid-cols-3 gap-12">
                 {/* Progetti */}
                 <div>
-                  <h4 className="font-title text-sm uppercase tracking-wider mb-4 text-black/60">
+                  <h4 className="font-title text-secondary text-sm uppercase tracking-wider mb-4">
                     Progetti collegati
                   </h4>
                   <ul className="space-y-2">
@@ -166,18 +166,18 @@ export function AreeLavoroSection() {
 
                 {/* Materiali */}
                 <div>
-                  <h4 className="font-title text-sm uppercase tracking-wider mb-4 text-black/60">
+                  <h4 className="font-title text-sm uppercase tracking-wider mb-4 text-secondary">
                     Materiali
                   </h4>
                   <ul className="space-y-3">
                     {area.materiali.map((materiale, i) => (
                       <li key={i} className="flex items-start gap-2">
                         {materiale.type === "PDF" ? (
-                          <FileText className="w-4 h-4 flex-shrink-0 mt-0.5 text-black/40" />
+                          <FileText className="w-4 h-4 flex-shrink-0 mt-0.5 text-secondary" />
                         ) : (
-                          <ExternalLink className="w-4 h-4 flex-shrink-0 mt-0.5 text-black/40" />
+                          <ExternalLink className="w-4 h-4 flex-shrink-0 mt-0.5 text-secondary" />
                         )}
-                        <span className=" font-body text-sm hover:underline cursor-pointer">
+                        <span className=" font-body text-foreground text-sm hover:underline cursor-pointer">
                           {materiale.title}
                         </span>
                       </li>
@@ -187,14 +187,14 @@ export function AreeLavoroSection() {
 
                 {/* Collaborazioni */}
                 <div>
-                  <h4 className="font-title text-sm uppercase tracking-wider mb-4 text-black/60">
+                  <h4 className="font-title text-sm uppercase tracking-wider mb-4 text-secondary">
                     Collaborazioni
                   </h4>
                   <ul className="space-y-2">
                     {area.collaborazioni.map((collab, i) => (
                       <li
                         key={i}
-                        className=" font-body text-sm text-black/60"
+                        className=" font-body text-sm text-secondary"
                       >
                         {collab}
                       </li>

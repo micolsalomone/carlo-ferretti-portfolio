@@ -53,13 +53,13 @@ export function ProgettiSection() {
   ];
 
   return (
-    <section id="progetti" className="py-32 bg-black/[0.02]">
+    <section id="progetti" className="py-32 section-back">
       <div className="max-w-5xl mx-auto px-6 lg:px-12">
         <div className="mb-24">
-          <h2 className=" font-title text-3xl lg:text-5xl tracking-tight mb-8">
+          <h2 className=" text-section font-title text-3xl lg:text-5xl tracking-tight mb-8">
             Progetti
           </h2>
-          <p className=" font-body text-lg text-black/60 max-w-2xl leading-relaxed">
+          <p className=" font-body text-lg text-section-secondary max-w-2xl leading-relaxed">
             Una selezione di progetti sviluppati negli ultimi anni, tra ricerca,
             consulenza e facilitazione.
           </p>
@@ -73,20 +73,20 @@ export function ProgettiSection() {
             >
               <div className="mb-4">
                 <div className="flex items-start justify-between mb-3">
-                  <h3 className="font-title  text-xl">
+                  <h3 className="text-section font-title  text-xl">
                     {progetto.title}
                   </h3>
                   <ArrowRight className="w-5 h-5 opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0 ml-4" />
                 </div>
-                <p className=" font-body text-sm text-black/60 mb-1">
+                <p className=" font-body text-sm text-section-secondary mb-1">
                   {progetto.category}
                 </p>
-                <p className=" font-body text-xs text-black/40">
+                <p className=" font-body text-xs text-section-secondary">
                   {progetto.year}
                 </p>
               </div>
 
-              <p className=" font-body text-sm text-black/60 mb-4 leading-relaxed">
+              <p className=" font-body text-sm text-section-secondary mb-4 leading-relaxed">
                 {progetto.description}
               </p>
 
@@ -94,7 +94,7 @@ export function ProgettiSection() {
                 {progetto.tags.map((tag, i) => (
                   <span
                     key={i}
-                    className="px-2 py-1 border border-black/10 font-body text-xs"
+                    className="px-2 py-1 border border-black/10 text-section font-body text-xs"
                   >
                     {tag}
                   </span>

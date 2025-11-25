@@ -57,14 +57,14 @@ export function RisorseSection() {
     <section id="risorse" className="py-32">
       <div className="max-w-5xl mx-auto px-6 lg:px-12">
         <div className="mb-24">
-          <h2 className="font-title  text-3xl lg:text-5xl tracking-tight mb-8">
+          <h2 className="font-title text-foreground text-3xl lg:text-5xl tracking-tight mb-8">
             Risorse
           </h2>
         </div>
 
         {/* Articoli */}
         <div className="mb-24">
-          <h3 className="font-title  text-sm uppercase tracking-wider mb-8 text-black/60">
+          <h3 className="font-title text-secondary  text-sm uppercase tracking-wider mb-8">
             Articoli
           </h3>
           <div className="space-y-6">
@@ -73,12 +73,12 @@ export function RisorseSection() {
                 key={index}
                 className="flex items-start gap-4 pb-6 border-b border-black/10 last:border-0 hover:border-black/30 transition-colors cursor-pointer group"
               >
-                <ExternalLink className="w-4 h-4 flex-shrink-0 mt-1 text-black/40 group-hover:text-black transition-colors" />
+                <ExternalLink className="w-4 h-4 flex-shrink-0 mt-1 text-secondary group-hover:text-black transition-colors" />
                 <div className="flex-1">
-                  <h4 className="font-title  mb-1">
+                  <h4 className="font-title text-foreground mb-1">
                     {articolo.title}
                   </h4>
-                  <p className="font-body  text-sm text-black/60">
+                  <p className="font-body  text-sm text-secondary">
                     {articolo.pubblicazione} — {articolo.anno}
                   </p>
                 </div>
@@ -89,7 +89,7 @@ export function RisorseSection() {
 
         {/* Podcast */}
         <div className="mb-24">
-          <h3 className="font-title  text-sm uppercase tracking-wider mb-8 text-black/60">
+          <h3 className="font-title  text-sm uppercase tracking-wider mb-8 text-secondary">
             Podcast
           </h3>
           <div className="grid md:grid-cols-2 gap-8">
@@ -99,17 +99,17 @@ export function RisorseSection() {
                 className="border border-black/10 p-8 hover:border-black/30 transition-colors cursor-pointer"
               >
                 <div className="flex items-start gap-4 mb-4">
-                  <Headphones className="w-5 h-5 flex-shrink-0 text-black/40" />
+                  <Headphones className="w-5 h-5 flex-shrink-0 text-secondary" />
                   <div>
                     <h4 className="font-title  mb-2">
                       {pod.title}
                     </h4>
-                    <p className="font-body  text-xs text-black/60 mb-3">
+                    <p className="font-body  text-xs text-secondary mb-3">
                       {pod.episodi}
                     </p>
                   </div>
                 </div>
-                <p className="font-body  text-sm text-black/60">
+                <p className="font-body  text-sm text-secondary">
                   {pod.descrizione}
                 </p>
               </div>
@@ -119,7 +119,7 @@ export function RisorseSection() {
 
         {/* Materiali scaricabili */}
         <div>
-          <h3 className="font-title  text-sm uppercase tracking-wider mb-8 text-black/60">
+          <h3 className="font-title  text-sm uppercase tracking-wider mb-8 text-secondary">
             Materiali scaricabili
           </h3>
           <div className="space-y-6">
@@ -128,15 +128,15 @@ export function RisorseSection() {
                 key={index}
                 className="flex items-start gap-4 pb-6 border-b border-black/10 last:border-0 hover:border-black/30 transition-colors cursor-pointer group"
               >
-                <FileText className="w-5 h-5 flex-shrink-0 mt-1 text-black/40 group-hover:text-black transition-colors" />
+                <FileText className="w-5 h-5 flex-shrink-0 mt-1 text-secondary group-hover:text-black transition-colors" />
                 <div className="flex-1">
                   <h4 className="font-title  mb-1">
                     {materiale.title}
                   </h4>
-                  <p className="font-body  text-xs text-black/60 mb-2">
+                  <p className="font-body  text-xs text-secondary mb-2">
                     {materiale.tipo}
                   </p>
-                  <p className="font-body  text-sm text-black/60">
+                  <p className="font-body  text-sm text-secondary">
                     {materiale.descrizione}
                   </p>
                 </div>
