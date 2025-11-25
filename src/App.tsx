@@ -4,7 +4,6 @@ import { TopBar } from "./components/TopBar";
 import { HeroSection } from "./components/sections/HeroSection";
 import { ApproccioSection } from "./components/sections/ApproccioSection";
 import { AreeLavoroSection } from "./components/sections/AreeLavoroSection";
-import { ProgettiSection } from "./components/sections/ProgettiSection";
 import { RisorseSection } from "./components/sections/RisorseSection";
 import { CollaborazioniSection } from "./components/sections/CollaborazioniSection";
 import { ContattoSection } from "./components/sections/ContattoSection";
@@ -56,7 +55,6 @@ export default function App() {
         <HeroSection />
         <ApproccioSection />
         <AreeLavoroSection />
-        <ProgettiSection />
         <RisorseSection />
         <CollaborazioniSection />
         <ContattoSection />

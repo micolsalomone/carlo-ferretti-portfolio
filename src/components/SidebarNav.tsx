@@ -11,7 +11,6 @@ export function SidebarNav({ activeSection }: SidebarNavProps) {
     { id: "home", label: "Chi sono" },
     { id: "approccio", label: "Approccio" },
     { id: "aree", label: "Aree di lavoro" },
-    { id: "progetti", label: "Progetti" },
     { id: "risorse", label: "Risorse" },
     { id: "collaborazioni", label: "Collaborazioni" },
     { id: "contatto", label: "Contattami" },

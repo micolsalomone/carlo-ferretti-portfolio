@@ -123,7 +123,7 @@ export function RisorseSection() {
   ];
 
   return (
-    <section id="media" className="py-32">
+    <section id="media" className="py-32 section-back">
       <div className="max-w-5xl mx-auto px-6 lg:px-12">
         <div className="mb-24">
           <h2 className="font-title text-foreground text-3xl lg:text-5xl tracking-tight mb-8">
