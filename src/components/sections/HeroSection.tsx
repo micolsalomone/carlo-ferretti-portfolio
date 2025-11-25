@@ -187,7 +187,7 @@ export function HeroSection() {
         {/* Progetti in evidenza */}
         <div className="mb-32">
           <div className="flex items-center justify-between mb-8">
-            <h3 className="font-title  text-sm uppercase tracking-wider text-secondary">
+            <h3 className="font-title text-sm uppercase tracking-wider text-secondary">
               Progetti in evidenza
             </h3>
             <a
