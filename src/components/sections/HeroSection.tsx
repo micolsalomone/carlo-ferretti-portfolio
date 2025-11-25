@@ -1,6 +1,3 @@
-import { ArrowRight } from "lucide-react";
-import { ProjectCard } from "../ProjectCard";
-import { NewsletterBox } from "../NewsletterBox";
 
 export function HeroSection() {
   const areeAttivita = [

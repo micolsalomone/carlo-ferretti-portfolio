@@ -1,4 +1,5 @@
-import { ExternalLink } from "lucide-react";
+// Rimuovi questa riga:
+// import { ExternalLink } from "lucide-react";
 
 // Ordine delle categorie come in ProgettiSection
 const aree = [
@@ -265,7 +266,7 @@ export function AreeLavoroSection() {
 											<div>
 												<div className="flex items-center justify-between mb-2">
 													<h4 className="font-title text-section text-base font-semibold">
-														{proj.url ? (
+														{"url" in proj && proj.url ? (
 															<a
 																href={proj.url}
 																target="_blank"
@@ -278,7 +279,7 @@ export function AreeLavoroSection() {
 															proj.title
 														)}
 													</h4>
-													{proj.year && (
+													{"year" in proj && proj.year && (
 														<span className="font-body text-xs text-section-secondary ml-2">
 															{proj.year}
 														</span>
