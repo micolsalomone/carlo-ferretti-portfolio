@@ -51,7 +51,7 @@ export function ApproccioSection() {
           <h2 className=" font-title text-3xl lg:text-5xl tracking-tight mb-8">
             Approccio e Metodo
           </h2>
-          <p className=" font-body text-lg text-black/60 max-w-2xl leading-relaxed">
+          <p className=" font-body text-lg text-secondary max-w-2xl leading-relaxed">
             Lavoro integrando competenze di design, ricerca sociale e management
             culturale. L'approccio è sistemico, partecipativo e orientato
             all'impatto.
@@ -60,7 +60,7 @@ export function ApproccioSection() {
 
         {/* Processo */}
         <div className="mb-32">
-          <h3 className=" font-title text-sm uppercase tracking-wider mb-12 text-black/60">
+          <h3 className=" font-title text-sm uppercase tracking-wider mb-12 text-secondary">
             Il processo
           </h3>
           <div className="space-y-16">
@@ -72,10 +72,10 @@ export function ApproccioSection() {
                   </span>
                 </div>
                 <div className="flex-1 pt-2">
-                  <h4 className=" font-title text-xl mb-3">
+                  <h4 className=" font-title text-2xl mb-3">
                     {item.title}
                   </h4>
-                  <p className=" font-body text-black/60 leading-relaxed">
+                  <p className=" font-body text-secondary leading-relaxed">
                     {item.description}
                   </p>
                 </div>
@@ -86,16 +86,16 @@ export function ApproccioSection() {
 
         {/* Valori */}
         <div>
-          <h3 className="  text-sm uppercase tracking-wider mb-12 text-black/60">
+          <h3 className="  text-sm uppercase tracking-wider mb-12 text-secondary">
             Valori e posture
           </h3>
           <div className="grid md:grid-cols-3 gap-12">
             {valori.map((valore, index) => (
               <div key={index}>
-                <h4 className="font-title text-lg mb-4">
+                <h4 className="font-title text-foreground text-xl mb-4">
                   {valore.title}
                 </h4>
-                <p className=" font-body text-sm text-black/60 leading-relaxed">
+                <p className=" font-body text-sm text-secondary leading-relaxed">
                   {valore.description}
                 </p>
               </div>
