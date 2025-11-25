@@ -6,7 +6,7 @@ const aree = [
 	{
 		id: "area-management",
 		title: "Management economia sociale",
-		icon: "/management.png",
+		icon: "management.png",
 		intro:
 			"Consulenza strategica e organizzativa per cooperative, imprese sociali, fondazioni.",
 		progetti: [
@@ -62,7 +62,7 @@ const aree = [
 	{
 		id: "area-progettazione",
 		title: "Progettazione europea",
-		icon: "/progettaz-europea.png",
+		icon: "progettaz-europea.png",
 		intro:
 			"Supporto alla progettazione, scrittura e gestione di progetti finanziati da programmi europei.",
 		progetti: [
@@ -106,7 +106,7 @@ const aree = [
 	{
 		id: "area-ricerca",
 		title: "Ricerca",
-		icon: "/ricerca.png",
+		icon: "ricerca.png",
 		intro:
 			"Ricerca qualitativa e quantitativa su economia sociale, innovazione culturale, pratiche collaborative.",
 		progetti: [
@@ -132,7 +132,7 @@ const aree = [
 	{
 		id: "area-valutazione",
 		title: "VIS (Valutazione d’impatto)",
-		icon: "/impatto-sociale.png",
+		icon: "impatto-sociale.png",
 		intro:
 			"Progettazione e implementazione di sistemi di misurazione dell'impatto per organizzazioni del terzo settore.",
 		progetti: [
@@ -148,7 +148,7 @@ const aree = [
 	{
 		id: "area-formazione",
 		title: "Didattica",
-		icon: "/formazione.png",
+		icon: "formazione.png",
 		intro:
 			"Percorsi formativi su design thinking, valutazione, progettazione partecipata.",
 		progetti: [
@@ -179,7 +179,7 @@ const aree = [
 	{
 		id: "area-media",
 		title: "Talking",
-		icon: "/media.png",
+		icon: "media.png",
 		intro:
 			"Podcast, articoli, talk pubblici su temi di innovazione sociale e cultura.",
 		progetti: [
@@ -205,7 +205,7 @@ const aree = [
 	{
 		id: "area-3dxr",
 		title: "3DXR",
-		icon: "/3dxr.png",
+		icon: "3dxr.png",
 		intro: "Progetti di innovazione digitale e realtà aumentata.",
 		progetti: [
 			{ title: "Caserta", description: "" },
@@ -234,16 +234,16 @@ export function AreeLavoroSection() {
 							<div className="flex items-center gap-4 mb-6">
 								<div className="w-[122px] h-[72px] opacity-40 relative flex-shrink-0 overflow-hidden">
 									<img
-										src={area.icon}
-										alt=""
-										className="absolute inset-0 size-full max-w-none pointer-events-none"
-										style={{
-											objectFit: "contain",
-											width: "100%",
-											height: "100%",
-										}}
-									/>
-								</div>
+                                        src={`${import.meta.env.BASE_URL}${area.icon}`}
+                                        alt=""
+                                        className="absolute inset-0 size-full max-w-none pointer-events-none"
+                                        style={{
+                                            objectFit: "contain",
+                                            width: "100%",
+                                            height: "100%",
+                                        }}
+                                    />
+                                </div>
 								<h3 className="font-title text-section text-3xl">
 									{area.title}
 								</h3>

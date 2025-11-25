@@ -1,12 +1,11 @@
-
 export function HeroSection() {
   const areeAttivita = [
-    { name: "Ricerca", id: "area-ricerca", icon: "/ricerca.png" },
-    { name: "Valutazione Impatto Sociale", id: "area-valutazione", icon: "/impatto-sociale.png" },
-    { name: "Progettazione Europea", id: "area-progettazione", icon: "/progettaz-europea.png" },
-    { name: "Management Economia Sociale", id: "area-management", icon: "/management.png" },
-    { name: "Formazione", id: "area-formazione", icon: "/formazione.png" },
-    { name: "Media & Talk", id: "area-media", icon: "/media.png" },
+    { name: "Ricerca", id: "area-ricerca", icon: "ricerca.png" },
+    { name: "Valutazione Impatto Sociale", id: "area-valutazione", icon: "impatto-sociale.png" },
+    { name: "Progettazione Europea", id: "area-progettazione", icon: "progettaz-europea.png" },
+    { name: "Management Economia Sociale", id: "area-management", icon: "management.png" },
+    { name: "Formazione", id: "area-formazione", icon: "formazione.png" },
+    { name: "Media & Talk", id: "area-media", icon: "media.png" },
   ];
 
   const scrollToArea = (areaId: string) => {
@@ -36,7 +35,7 @@ export function HeroSection() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col-reverse lg:flex-row items-start gap-12 pb-2">
         {/* Foto */}
         <div className="flex-shrink-0 w-full max-w-[340px] aspect-[3/4] bg-black/5 rounded-lg flex items-center justify-center overflow-hidden lg:mr-8">
-          <img src="/portrait.png" alt="Carlo Ferretti" className="w-full h-full object-cover grayscale" />
+          <img src={`${import.meta.env.BASE_URL}portrait.png`} alt="Carlo Ferretti" className="w-full h-full object-cover grayscale" />
         </div>
         {/* Testo e partner */}
         <div className="flex-1 flex flex-col justify-center">
@@ -110,7 +109,7 @@ export function HeroSection() {
             >
               <span className="w-16 h-16 flex items-center justify-center">
                 <img
-                  src={area.icon}
+                  src={`${import.meta.env.BASE_URL}${area.icon}`}
                   alt=""
                   className="w-full h-full object-contain opacity-80"
                   draggable={false}

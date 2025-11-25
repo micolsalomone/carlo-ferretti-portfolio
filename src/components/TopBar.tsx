@@ -39,7 +39,7 @@ export function TopBar() {
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
               <img
                 alt=""
-                src="/sticker.png"
+                src={`${import.meta.env.BASE_URL}sticker.png`}
                 style={{
                   objectFit: "contain",
                   width: "100%",
