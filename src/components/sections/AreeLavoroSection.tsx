@@ -231,19 +231,19 @@ export function AreeLavoroSection() {
 							id={area.id}
 							className="pb-16 border-b border-black/10 last:border-0"
 						>
-							<div className="flex items-center gap-4 mb-6">
-								<div className="w-[122px] h-[72px] opacity-40 relative flex-shrink-0 overflow-hidden">
+							<div className="flex flex-col items-start gap-2 mb-6 lg:flex-row lg:items-center lg:gap-4">
+								<div className="w-[122px] h-[72px] opacity-40 relative flex-shrink-0 overflow-hidden mb-2 lg:mb-0">
 									<img
-                                        src={`${import.meta.env.BASE_URL}${area.icon}`}
-                                        alt=""
-                                        className="absolute inset-0 size-full max-w-none pointer-events-none"
-                                        style={{
-                                            objectFit: "contain",
-                                            width: "100%",
-                                            height: "100%",
-                                        }}
-                                    />
-                                </div>
+										src={`${import.meta.env.BASE_URL}${area.icon}`}
+										alt=""
+										className="absolute inset-0 size-full max-w-none pointer-events-none"
+										style={{
+											objectFit: "contain",
+											width: "100%",
+											height: "100%",
+										}}
+									/>
+								</div>
 								<h3 className="font-title text-section text-3xl">
 									{area.title}
 								</h3>

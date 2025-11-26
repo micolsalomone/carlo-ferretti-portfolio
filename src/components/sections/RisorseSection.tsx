@@ -177,11 +177,11 @@ export function RisorseSection() {
             {podcast.map((pod, index) => (
               <div
                 key={index}
-                className="border border-black/10 rounded-lg hover:border-black/30 transition-colors cursor-pointer bg-background flex flex-row items-start p-8 gap-8 min-h-[220px]"
+                className="border border-black/10 rounded-lg hover:border-black/30 transition-colors cursor-pointer bg-background flex flex-col lg:flex-row items-start p-8 gap-8 min-h-[220px]"
               >
-                {/* Immagine quadrata, più grande */}
+                {/* Immagine quadrata e responsive */}
                 {pod.image && (
-                  <div className="w-44 h-44 min-w-[11rem] min-h-[11rem] bg-black/5 flex items-center justify-center overflow-hidden rounded-md">
+                  <div className="aspect-square w-full lg:w-44 bg-black/5 flex items-center justify-center overflow-hidden rounded-md mb-6 lg:mb-0">
                     <img
                       src={pod.image}
                       alt={pod.title}
