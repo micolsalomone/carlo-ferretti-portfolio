@@ -14,14 +14,14 @@ export function TopBar() {
 
   return (
     <div
-      className={`sticky top-0 w-full bg-white z-40 transition-all duration-300 ${
+      className={`sticky top-0 w-full topbar z-40 transition-all duration-300 ${
         isScrolled ? "py-3" : "py-6"
       }`}
       data-name="Heading 1"
     >
       <div aria-hidden="true" className="absolute border-[#d1d1d1] border-[0px_0px_1px] border-solid inset-0 pointer-events-none" />
       <div className="flex flex-row items-center w-full">
-        <div className="box-border content-stretch flex items-center justify-between px-6 lg:px-[168px] relative w-full pl-14 lg:pl-16">
+        <div className="box-border content-stretch flex items-center justify-between px-6 lg:px-[168px] relative w-full">
           <p
             className={`font-title text-foreground font-medium leading-[26px] relative shrink-0 text-nowrap tracking-[-0.4px] whitespace-pre transition-all duration-300 ${
               isScrolled ? "text-[18px]" : "text-[22px]"

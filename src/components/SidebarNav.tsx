@@ -1,4 +1,4 @@
-import { useState } from "react";
+ 
 
 interface SidebarNavProps {
   activeSection: string;
@@ -6,7 +6,7 @@ interface SidebarNavProps {
 }
 
 export function SidebarNav({ activeSection, onScrollToSection }: SidebarNavProps) {
-  const [mobileOpen, setMobileOpen] = useState(false);
+  
 
   const navItems = [
     { id: "home", label: "Chi sono" },
@@ -20,7 +20,6 @@ export function SidebarNav({ activeSection, onScrollToSection }: SidebarNavProps
   const scrollToSection = (id: string) => {
     if (onScrollToSection) {
       onScrollToSection(id);
-      setMobileOpen(false);
       return;
     }
     const element = document.getElementById(id);
@@ -31,7 +30,7 @@ export function SidebarNav({ activeSection, onScrollToSection }: SidebarNavProps
         top: elementPosition,
         behavior: "smooth",
       });
-      setMobileOpen(false); // chiudi menu dopo click
+      // chiudi menu dopo click (non più necessario su mobile)
     }
   };
 
@@ -73,60 +72,6 @@ export function SidebarNav({ activeSection, onScrollToSection }: SidebarNavProps
           </nav>
         </div>
       </nav>
-
-      {/* Mobile Burger Menu */}
-      <div className="lg:hidden fixed top-0 left-0 right-0 z-50">
-        {/* Burger menu a sinistra */}
-        <button
-          aria-label="Apri menu"
-          className="absolute left-4 top-4 p-2 bg-white rounded-md border border-black/10"
-          onClick={() => setMobileOpen(true)}
-        >
-          {/* Hamburger icon */}
-          <span className="block w-6 h-0.5 bg-black mb-1"></span>
-          <span className="block w-6 h-0.5 bg-black mb-1"></span>
-          <span className="block w-6 h-0.5 bg-black"></span>
-        </button>
-        {/* Menu mobile */}
-        {mobileOpen && (
-          <div className="fixed inset-0 bg-black/40 z-50 flex">
-            <nav className="bg-white w-64 h-full p-8 shadow-lg">
-              <button
-                aria-label="Chiudi menu"
-                className="mb-8 text-black"
-                onClick={() => setMobileOpen(false)}
-              >
-                ✕
-              </button>
-              <ul className="space-y-6">
-                {navItems.map((item) => (
-                  <li key={item.id}>
-                    <button
-                      onClick={() => scrollToSection(item.id)}
-                      className={`
-                        font-body text-lg w-full text-left
-                        ${
-                          activeSection === item.id
-                            ? "text-black"
-                            : "text-black/40 hover:text-black/70"
-                        }
-                      `}
-                    >
-                      {item.label}
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-            {/* Click outside to close */}
-            <div
-              className="flex-1"
-              onClick={() => setMobileOpen(false)}
-              aria-hidden="true"
-            />
-          </div>
-        )}
-      </div>
     </>
   );
 }

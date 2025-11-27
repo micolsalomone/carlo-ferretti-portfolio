@@ -1,3 +1,5 @@
+import { MobileStickySectionHeader } from "../MobileStickySectionHeader";
+
 export function ApproccioSection() {
   const processo = [
     {
@@ -46,9 +48,10 @@ export function ApproccioSection() {
 
   return (
     <section id="approccio" className="py-32 section-back">
+      <MobileStickySectionHeader title="Approccio" />
       <div className="max-w-5xl mx-auto px-6 lg:px-12">
         <div className="mb-24">
-          <h2 className=" font-title text-3xl lg:text-5xl tracking-tight mb-8">
+          <h2 className="hidden lg:block font-title text-3xl lg:text-5xl tracking-tight mb-8">
             Approccio e Metodo
           </h2>
           <p className=" font-body text-lg text-secondary max-w-2xl leading-relaxed">

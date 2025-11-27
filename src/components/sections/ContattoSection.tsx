@@ -1,12 +1,14 @@
 import { Mail, Linkedin } from "lucide-react";
+import { MobileStickySectionHeader } from "../MobileStickySectionHeader";
 import { NewsletterBox } from "../NewsletterBox";
 
 export function ContattoSection() {
   return (
     <section id="contatto" className="py-32 section-back">
+      <MobileStickySectionHeader title="Contattami" />
       <div className="max-w-5xl mx-auto px-6 lg:px-12">
         <div className="mb-24">
-          <h2 className=" font-title text-section text-3xl lg:text-5xl tracking-tight mb-8">
+          <h2 className="hidden lg:block font-title text-section text-3xl lg:text-5xl tracking-tight mb-8">
             Contattami
           </h2>
 

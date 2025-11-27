@@ -7,8 +7,8 @@
 :root {
   --font-size: 16px;
   --background: #ffffff;
-  --foreground: #000000;
-  --card: #ffffff;
+  --foreground: #080808;
+  --card: #fff;
   --card-foreground: #000000;
   --popover: #ffffff;
   --popover-foreground: #000000;
@@ -43,8 +43,8 @@
   --sidebar-accent-foreground: #000000;
   --sidebar-border: rgba(0, 0, 0, 0.1);
   --sidebar-ring: rgba(0, 0, 0, 0.2);
-  --section-background: #e3e9ee;      /* Sfondo sezioni */
-  --text-secondary: #798a92;          /* Testo secondario */
+  --section-background: #bedbe3;      /* Sfondo sezioni */
+  --text-secondary: #616f7b;          /* Testo secondario */
 }
 
 .dark {
@@ -226,7 +226,7 @@ html {
     background-color: var(--accent);
   }
     .text-foreground {
-    color: var(--foreground, #000);
+    color: var(--foreground);
   }
   .text-secondary {
     color: var(--text-secondary);
@@ -248,6 +248,9 @@ html {
   }
   .sidebar {
     background-color: var(--sidebar);
+  }
+  .topbar {
+    background-color: var(--background);
   }
 }
 

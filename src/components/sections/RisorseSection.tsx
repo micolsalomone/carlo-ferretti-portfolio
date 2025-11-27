@@ -1,5 +1,7 @@
 import { FileText, Headphones, ExternalLink } from "lucide-react";
 
+import { MobileStickySectionHeader } from "../MobileStickySectionHeader";
+
 export function RisorseSection() {
   const articoli = [
     {
@@ -124,9 +126,10 @@ export function RisorseSection() {
 
   return (
     <section id="media" className="py-32 section-back">
+      <MobileStickySectionHeader title="Media" />
       <div className="max-w-5xl mx-auto px-6 lg:px-12">
         <div className="mb-24">
-          <h2 className="font-title text-section text-3xl lg:text-5xl tracking-tight mb-8">
+          <h2 className="hidden lg:block font-title text-section text-3xl lg:text-5xl tracking-tight mb-8">
             Media
           </h2>
         </div>

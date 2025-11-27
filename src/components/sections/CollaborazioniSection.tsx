@@ -1,3 +1,5 @@
+import { MobileStickySectionHeader } from "../MobileStickySectionHeader";
+
 export function CollaborazioniSection() {
   const collaborazioni = [
     {
@@ -80,9 +82,10 @@ export function CollaborazioniSection() {
 
   return (
     <section id="collaborazioni" className="py-32 bg-background">
+      <MobileStickySectionHeader title="Collaborazioni" />
       <div className="max-w-5xl mx-auto px-6 lg:px-12">
         <div className="mb-24">
-          <h2 className="font-title text-foreground text-3xl lg:text-5xl tracking-tight mb-8">
+          <h2 className="hidden lg:block font-title text-foreground text-3xl lg:text-5xl tracking-tight mb-8">
             Collaborazioni
           </h2>
           <p className="font-body text-lg text-secondary max-w-2xl leading-relaxed">
