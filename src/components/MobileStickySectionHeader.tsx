@@ -77,7 +77,9 @@ export function MobileStickySectionHeader({
     } else {
       const element = document.getElementById(id);
       if (element) {
-        const offset = 100;
+        // Calcola dinamicamente l'altezza della sticky header
+        const header = document.querySelector('.sticky.top-[58px]');
+        const offset = header ? (header as HTMLElement).offsetHeight : 58;
         const elementPosition = element.offsetTop - offset;
         window.scrollTo({ top: elementPosition, behavior: "smooth" });
       }
@@ -101,7 +103,7 @@ export function MobileStickySectionHeader({
             className="inline-flex items-center gap-2 px-3 py-2 text-sm border border-black/10 rounded-md bg-white text-black shadow"
             onClick={() => setOpen((v) => !v)}
           >
-            Indice
+            Vai a
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <path d="M6 9l6 6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>

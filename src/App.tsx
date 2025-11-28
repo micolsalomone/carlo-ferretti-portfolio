@@ -22,11 +22,15 @@ const navItems = [
 export default function App() {
   const [activeSection, setActiveSection] = useState("home");
   const [forceFadeVisible, setForceFadeVisible] = useState(false);
+  const [isTopBarSticky, setIsTopBarSticky] = useState(false); // nuovo stato
 
   useEffect(() => {
     const handleScroll = () => {
       const sections = navItems.map((item) => item.id);
       const scrollPosition = window.scrollY + 200;
+
+      // Gestione sticky TopBar
+      setIsTopBarSticky(window.scrollY > 50);
 
       for (const sectionId of sections) {
         const element = document.getElementById(sectionId);
@@ -73,12 +77,15 @@ export default function App() {
         activeSection={activeSection}
         onScrollToSection={handleSidebarScroll}
       />
-      {/* Sticky header mobile, fuori dal main */}
-      <MobileStickySectionHeader
-        title={activeTitle}
-        navItems={navItems}
-        showOnScrollOnly
-      />
+      {/* Sticky header mobile, solo dopo che la TopBar è sticky */}
+      {isTopBarSticky && (
+        <MobileStickySectionHeader
+          title={activeTitle}
+          navItems={navItems}
+          showOnScrollOnly={false}
+          onNavigate={handleSidebarScroll} // <--- aggiungi questa prop!
+        />
+      )}
       <main className="ml-0 lg:ml-64">
         <TopBar />
         <FadeInSection forceVisible={forceFadeVisible}>
