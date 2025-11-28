@@ -1,5 +1,3 @@
-import { MobileStickySectionHeader } from "../MobileStickySectionHeader";
-
 export function ApproccioSection() {
   const processo = [
     {
@@ -48,13 +46,12 @@ export function ApproccioSection() {
 
   return (
     <section id="approccio" className="py-32 section-back">
-      <MobileStickySectionHeader title="Approccio" />
       <div className="max-w-5xl mx-auto px-6 lg:px-12">
         <div className="mb-24">
-          <h2 className="hidden lg:block font-title text-3xl lg:text-5xl tracking-tight mb-8">
+          <h2 className="font-title text-3xl lg:text-5xl tracking-tight mb-8">
             Approccio e Metodo
           </h2>
-          <p className=" font-body text-lg text-secondary max-w-2xl leading-relaxed">
+          <p className="font-body text-lg text-secondary max-w-2xl leading-relaxed">
             Lavoro integrando competenze di design, ricerca sociale e management
             culturale. L'approccio è sistemico, partecipativo e orientato
             all'impatto.
@@ -63,22 +60,22 @@ export function ApproccioSection() {
 
         {/* Processo */}
         <div className="mb-32">
-          <h3 className=" font-title text-sm uppercase tracking-wider mb-12 text-secondary">
+          <h3 className="font-title text-sm uppercase tracking-wider mb-12 text-secondary">
             Il processo
           </h3>
           <div className="space-y-16">
             {processo.map((item, index) => (
               <div key={index} className="flex gap-8">
                 <div className="flex-shrink-0">
-                  <span className=" font-title text-4xl text-black/10">
+                  <span className="font-title text-4xl text-black/10">
                     {item.step}
                   </span>
                 </div>
                 <div className="flex-1 pt-2">
-                  <h4 className=" font-title text-2xl mb-3">
+                  <h4 className="font-title text-2xl mb-3">
                     {item.title}
                   </h4>
-                  <p className=" font-body text-secondary leading-relaxed">
+                  <p className="font-body text-secondary leading-relaxed">
                     {item.description}
                   </p>
                 </div>
@@ -89,7 +86,7 @@ export function ApproccioSection() {
 
         {/* Valori */}
         <div>
-          <h3 className="  text-sm uppercase tracking-wider mb-12 text-secondary">
+          <h3 className="text-sm uppercase tracking-wider mb-12 text-secondary">
             Valori e posture
           </h3>
           <div className="grid md:grid-cols-3 gap-12">
@@ -98,7 +95,7 @@ export function ApproccioSection() {
                 <h4 className="font-title text-foreground text-xl mb-4">
                   {valore.title}
                 </h4>
-                <p className=" font-body text-sm text-secondary leading-relaxed">
+                <p className="font-body text-sm text-secondary leading-relaxed">
                   {valore.description}
                 </p>
               </div>

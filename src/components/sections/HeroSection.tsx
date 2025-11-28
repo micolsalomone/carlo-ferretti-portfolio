@@ -1,4 +1,3 @@
-import { MobileStickySectionHeader } from "../MobileStickySectionHeader";
 
 export function HeroSection() {
   const areeAttivita = [
@@ -34,7 +33,6 @@ export function HeroSection() {
 
   return (
     <section id="home" className="w-full bg-background pt-12 lg:pt-24 pb-0">
-      <MobileStickySectionHeader title="Chi sono" showOnScrollOnly />
       <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col-reverse lg:flex-row items-start gap-12 pb-2">
         {/* Foto */}
         <div className="flex-shrink-0 w-full max-w-[340px] aspect-[3/4] bg-black/5 rounded-lg flex items-center justify-center overflow-hidden lg:mr-8">

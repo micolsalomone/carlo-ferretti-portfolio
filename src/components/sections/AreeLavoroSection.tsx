@@ -214,18 +214,15 @@ const aree = [
 	},
 ];
 
-import { MobileStickySectionHeader } from "../MobileStickySectionHeader";
-
 export function AreeLavoroSection() {
 	return (
 		<section id="aree" className="py-32 bg-background">
-			<MobileStickySectionHeader title="Aree di lavoro" />
 			<div className="max-w-5xl mx-auto px-6 lg:px-12">
 				<div className="mb-24">
-					<h2 className="hidden lg:block font-title text-section text-3xl lg:text-5xl tracking-tight mb-8">
-						Aree di lavoro
-					</h2>
-				</div>
+                    <h2 className="font-title text-section text-3xl lg:text-5xl tracking-tight mb-8">
+                        Aree di lavoro
+                    </h2>
+                </div>
 
 				<div className="space-y-32">
 					{aree.map((area, index) => (

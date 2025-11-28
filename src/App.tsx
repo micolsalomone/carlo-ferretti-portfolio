@@ -8,6 +8,16 @@ import { RisorseSection } from "./components/sections/RisorseSection";
 import { CollaborazioniSection } from "./components/sections/CollaborazioniSection";
 import { ContattoSection } from "./components/sections/ContattoSection";
 import { FadeInSection } from "./components/FadeInSection";
+import { MobileStickySectionHeader } from "./components/MobileStickySectionHeader"; // aggiungi import
+
+const navItems = [
+  { id: "home", label: "Chi sono" },
+  { id: "approccio", label: "Approccio" },
+  { id: "aree", label: "Aree di lavoro" },
+  { id: "media", label: "Media" },
+  { id: "collaborazioni", label: "Collaborazioni" },
+  { id: "contatto", label: "Contattami" },
+];
 
 export default function App() {
   const [activeSection, setActiveSection] = useState("home");
@@ -15,16 +25,7 @@ export default function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = [
-        "home",
-        "approccio",
-        "aree",
-        "progetti",
-        "media",
-        "collaborazioni",
-        "contatto",
-      ];
-
+      const sections = navItems.map((item) => item.id);
       const scrollPosition = window.scrollY + 200;
 
       for (const sectionId of sections) {
@@ -62,11 +63,21 @@ export default function App() {
     setTimeout(() => setForceFadeVisible(false), 800); // reset dopo fade
   };
 
+  // Trova il titolo della sezione attiva
+  const activeTitle =
+    navItems.find((item) => item.id === activeSection)?.label || "";
+
   return (
     <div className="min-h-screen bg-white text-black">
       <SidebarNav
         activeSection={activeSection}
         onScrollToSection={handleSidebarScroll}
+      />
+      {/* Sticky header mobile, fuori dal main */}
+      <MobileStickySectionHeader
+        title={activeTitle}
+        navItems={navItems}
+        showOnScrollOnly
       />
       <main className="ml-0 lg:ml-64">
         <TopBar />
